@@ -1,0 +1,38 @@
+  <app-menu></app-menu>
+    <div class="row">
+    <h1 style="text-align: center">Blog Prueba Tecnica </h1>
+    <div class="leftcolumn">
+      <div class="card" *ngFor="let datos of datos | paginate: {itemsPerPage:10, currentPage:p}, let i = index">
+        <h2>{{i+1}}  <a [routerLink]="'blog-details/'+ datos.id">{{datos.title  |uppercase}}</a> </h2>
+        <h5>|{{datos.author | uppercase}} | {{datos.created_at}} | {{datos.title |uppercase}}</h5>
+        <div class="fakeimg" style="height:200px;" *ngFor="let img of img"> <img [src]="img.href" alt="img.href" width="300" height="100"> </div>
+        <p>{{datos.content}}.</p>
+      </div>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls> 
+    </div>
+
+    <div class="rightcolumn" >
+      <div class="card">
+        <h2>Lastest blog post {{datos.title}}</h2>
+      </div>
+      <div class="card">
+        <h3>Popular Post</h3>
+        <div class="fakeimg" *ngFor="let last of lastest "> {{last.created_at}}
+            <p>{{last.title}}</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <table>
+      <th>footer link</th>
+      <th>footer link</th>
+      <th>footer link</th>
+    </table>
+  </div>
+  
+  
+  
+  
+  

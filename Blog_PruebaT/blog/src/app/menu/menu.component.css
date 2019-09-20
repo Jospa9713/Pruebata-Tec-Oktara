@@ -1,0 +1,33 @@
+body{
+	background-color:#1e2023;
+	font-family:'Fira Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: rgb(228, 70, 70);
+  }
+  
+  li {
+	float: left;
+	padding: 15px;
+  }
+  
+  li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	transition: .5s ease;
+	
+  }
+  li a:hover {
+	border-top: 2px solid #0075d9;
+	border-bottom: 2px solid #0075d9;
+	
+  }
